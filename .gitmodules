@@ -1,0 +1,6 @@
+[submodule "thesis_tracklab"]
+	path = thesis_tracklab
+	url = git@github.com:dariogod/thesis_tracklab.git
+[submodule "thesis_sn-gamestate"]
+	path = thesis_sn-gamestate
+	url = git@github.com:dariogod/thesis_sn-gamestate.git
