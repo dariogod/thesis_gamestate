@@ -176,3 +176,6 @@ data/
 
 # mac Os
 .DS_Store
+
+# pickle files
+*.pklz
