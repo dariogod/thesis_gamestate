@@ -9,6 +9,7 @@ services:
       - ./thesis_sn-gamestate:/app/thesis_sn-gamestate
       - ./thesis_tracklab:/app/thesis_tracklab
       - ./data:/app/data
+      - ./outputs:/app/outputs
     # deploy:
     #   resources:
     #     reservations:

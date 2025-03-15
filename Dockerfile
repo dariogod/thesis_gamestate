@@ -29,7 +29,8 @@ RUN cd /app/thesis_tracklab && pip3 install -e .
 RUN pip3 install openmim && mim install mmcv==2.0.1
 RUN pip3 install "pytorch-lightning<2.0.0"
 
-COPY data /app/data
+COPY data/SoccerNetGS/gamestate-2024/challenge/ /app/data/SoccerNetGS/gamestate-2024/challenge/
+COPY outputs/ /app/outputs/
 
 # Set default command
 CMD ["python3", "-m", "tracklab.main", "-cn", "soccernet"] 
