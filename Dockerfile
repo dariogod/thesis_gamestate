@@ -25,12 +25,15 @@ COPY thesis_tracklab /app/thesis_tracklab
 RUN pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir torch==1.13.1 torchvision==0.14.1 --extra-index-url https://download.pytorch.org/whl/cu117
 RUN cd /app/thesis_sn-gamestate && pip3 install -e .
-RUN cd /app/thesis_tracklab && pip3 install -e .
+RUN cd /app/thesis_tracklab && pip3 install -e . && pip3 install -r requirements.txt
 RUN pip3 install openmim && mim install mmcv==2.0.1
 RUN pip3 install "pytorch-lightning<2.0.0"
 
 COPY data/SoccerNetGS/gamestate-2024/challenge/ /app/data/SoccerNetGS/gamestate-2024/challenge/
 COPY outputs/ /app/outputs/
 
-# Set default command
-CMD ["python3", "-m", "tracklab.main", "-cn", "soccernet"] 
+# Expose the port the API will run on
+EXPOSE 8000
+
+# Set default command to run the FastAPI server
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"] 
