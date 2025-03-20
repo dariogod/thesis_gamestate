@@ -169,3 +169,13 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# data folder
+data/
+
+# mac Os
+.DS_Store
+
+# pickle files
+*.pklz
