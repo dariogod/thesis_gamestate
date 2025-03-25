@@ -12,7 +12,6 @@ services:
       - ./thesis_tracklab:/app/thesis_tracklab
       - ./data:/app/data
       - ./outputs:/app/outputs
-      - ./eval:/app/eval
     # deploy:
     #   resources:
     #     reservations:
