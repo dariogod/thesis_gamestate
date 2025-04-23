@@ -21,4 +21,5 @@ services:
               capabilities: [gpu]
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
-    tty: true 
+    tty: true
+    shm_size: '16gb' 
