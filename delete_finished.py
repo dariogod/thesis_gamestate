@@ -1,6 +1,6 @@
 import os
 
-base_path = 'outputs/sn-gamestate/2025-04-23/09-30-53/eval/pred/SoccerNetGS-challenge/tracklab'
+base_path = 'outputs/sn-gamestate/2025-04-23/13-16-56/eval/pred/SoccerNetGS-challenge/tracklab'
 data_path = 'data/SoccerNetGS/gamestate-2024/challenge'
 
 for file in os.listdir(base_path):
