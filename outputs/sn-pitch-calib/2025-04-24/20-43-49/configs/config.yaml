@@ -1,0 +1,294 @@
+dataset:
+  dataset_path: ${data_dir}/SoccerNetGS/gamestate-2024
+  nvid: 1
+  nframes: -1
+  eval_set: challenge
+  vids_dict:
+    train: []
+    val: []
+    test: []
+    valid: []
+  track_eval:
+    dataset_class: SoccerNetGS
+    BENCHMARK: MotChallenge2DBox
+    GT_FOLDER: eval/gt
+    GT_LOC_FORMAT: '{gt_folder}/{seq}.txt'
+    TRACKERS_FOLDER: eval/pred
+    TRACKER_SUB_FOLDER: ''
+    OUTPUT_FOLDER: eval/results
+    OUTPUT_SUB_FOLDER: ''
+    SPLIT_TO_EVAL: ${dataset.eval_set}
+    PRINT_CONFIG: false
+    DO_PREPROC: false
+    TRACKER_DISPLAY_NAMES: null
+    EVAL_SPACE: pitch
+    USE_ROLES: true
+    USE_TEAMS: true
+    USE_JERSEY_NUMBERS: true
+  _target_: tracklab.wrappers.SoccerNetGameState
+  annotation_path: ${data_dir}/SoccerNetGS
+eval:
+  _target_: tracklab.wrappers.TrackEvalEvaluator
+  show_progressbar: true
+  eval_set: ${dataset.eval_set}
+  dataset_path: ${dataset.dataset_path}
+  cfg:
+    save_gt: false
+    bbox_column_for_eval: bbox_ltwh
+    metrics:
+    - CLEAR
+    - HOTA
+    - Identity
+    eval:
+      USE_PARALLEL: true
+      NUM_PARALLEL_CORES: ${num_cores}
+      BREAK_ON_ERROR: false
+      PRINT_RESULTS: true
+      PRINT_ONLY_COMBINED: true
+      PRINT_CONFIG: false
+      TIME_PROGRESS: false
+      DISPLAY_LESS_PROGRESS: false
+      OUTPUT_SUMMARY: true
+      OUTPUT_EMPTY_CLASSES: false
+      OUTPUT_DETAILED: true
+      PLOT_CURVES: true
+    dataset: ${dataset.track_eval}
+engine:
+  _target_: tracklab.engine.OfflineTrackingEngine
+  num_workers: ${num_cores}
+  callbacks:
+    progress:
+      _target_: tracklab.callbacks.Progressbar
+      use_rich: ${use_rich}
+    ignored_regions:
+      _target_: tracklab.callbacks.IgnoredRegions
+      max_intersection: 0.9
+    vis: ${visualization}
+state:
+  save_file: states/${experiment_name}.pklz
+  compression: 0
+  load_file: null
+visualization:
+  _target_: sn_gamestate.visualization.PitchVisualizationEngine
+  cfg:
+    save_images: false
+    save_videos: true
+    show_online: false
+    process_n_videos: -1
+    process_n_frames_by_video: -1
+    video_fps: 25
+    vis_kp_threshold: 0.3
+    num_workers: ${num_cores}
+    prediction:
+      draw_bbox: true
+      draw_keypoints: false
+      draw_skeleton: false
+      draw_unmatched: false
+      display_jersey_number: true
+      display_team: true
+      display_role: true
+      print_id: true
+      print_bbox_confidence: false
+      print_keypoints_confidence: false
+      draw_bpbreid_heatmaps: false
+      heatmaps_display_threshold: 0.05
+      display_matched_with: false
+      display_n_closer_tracklets_costs: 0
+      display_reid_visibility_scores: false
+      draw_kf_bbox: false
+    ground_truth:
+      draw_bbox: false
+      draw_keypoints: false
+      draw_skeleton: false
+      draw_ignore_region: false
+      print_id: false
+      print_bbox_confidence: false
+      print_bbox_state: false
+      print_keypoints_confidence: false
+    bbox:
+      displayed:
+      - detect
+      thickness: 1
+      color_prediction: null
+      color_ground_truth: null
+      color_no_id:
+      - 0
+      - 0
+      - 0
+      color_kf:
+      - 200
+      - 200
+      - 200
+    text:
+      font: 1
+      scale: 1
+      thickness: 1
+      color_prediction: null
+      color_ground_truth: null
+      color_no_id:
+      - 0
+      - 0
+      - 0
+    keypoint:
+      radius: 4
+      thickness: -1
+      color_prediction: null
+      color_ground_truth: null
+      color_no_id:
+      - 0
+      - 0
+      - 0
+    skeleton:
+      thickness: 2
+      color_prediction: null
+      color_ground_truth: null
+      color_no_id:
+      - 0
+      - 0
+      - 0
+    pitch:
+      line_thickness: 3
+      pitch_scale: 4
+      pitch_image: ${model_dir}/calibration/Radar.png
+modules:
+  pitch:
+    _target_: sn_gamestate.calibration.nbjw_calib.NBJW_Calib_Keypoints
+    checkpoint_kp: ${model_dir}/calibration/SV_kp
+    checkpoint_l: ${model_dir}/calibration/SV_lines
+    image_width: 1920
+    image_height: 1080
+    batch_size: 1
+    cfg:
+      MODEL:
+        IMAGE_SIZE:
+        - 960
+        - 540
+        NUM_JOINTS: 58
+        PRETRAIN: ''
+        EXTRA:
+          FINAL_CONV_KERNEL: 1
+          STAGE1:
+            NUM_MODULES: 1
+            NUM_BRANCHES: 1
+            BLOCK: BOTTLENECK
+            NUM_BLOCKS:
+            - 4
+            NUM_CHANNELS:
+            - 64
+            FUSE_METHOD: SUM
+          STAGE2:
+            NUM_MODULES: 1
+            NUM_BRANCHES: 2
+            BLOCK: BASIC
+            NUM_BLOCKS:
+            - 4
+            - 4
+            NUM_CHANNELS:
+            - 48
+            - 96
+            FUSE_METHOD: SUM
+          STAGE3:
+            NUM_MODULES: 4
+            NUM_BRANCHES: 3
+            BLOCK: BASIC
+            NUM_BLOCKS:
+            - 4
+            - 4
+            - 4
+            NUM_CHANNELS:
+            - 48
+            - 96
+            - 192
+            FUSE_METHOD: SUM
+          STAGE4:
+            NUM_MODULES: 3
+            NUM_BRANCHES: 4
+            BLOCK: BASIC
+            NUM_BLOCKS:
+            - 4
+            - 4
+            - 4
+            - 4
+            NUM_CHANNELS:
+            - 48
+            - 96
+            - 192
+            - 384
+            FUSE_METHOD: SUM
+    cfg_l:
+      MODEL:
+        IMAGE_SIZE:
+        - 960
+        - 540
+        NUM_JOINTS: 24
+        PRETRAIN: ''
+        EXTRA:
+          FINAL_CONV_KERNEL: 1
+          STAGE1:
+            NUM_MODULES: 1
+            NUM_BRANCHES: 1
+            BLOCK: BOTTLENECK
+            NUM_BLOCKS:
+            - 4
+            NUM_CHANNELS:
+            - 64
+            FUSE_METHOD: SUM
+          STAGE2:
+            NUM_MODULES: 1
+            NUM_BRANCHES: 2
+            BLOCK: BASIC
+            NUM_BLOCKS:
+            - 4
+            - 4
+            NUM_CHANNELS:
+            - 48
+            - 96
+            FUSE_METHOD: SUM
+          STAGE3:
+            NUM_MODULES: 4
+            NUM_BRANCHES: 3
+            BLOCK: BASIC
+            NUM_BLOCKS:
+            - 4
+            - 4
+            - 4
+            NUM_CHANNELS:
+            - 48
+            - 96
+            - 192
+            FUSE_METHOD: SUM
+          STAGE4:
+            NUM_MODULES: 3
+            NUM_BRANCHES: 4
+            BLOCK: BASIC
+            NUM_BLOCKS:
+            - 4
+            - 4
+            - 4
+            - 4
+            NUM_CHANNELS:
+            - 48
+            - 96
+            - 192
+            - 384
+            FUSE_METHOD: SUM
+  calibration:
+    _target_: sn_gamestate.calibration.nbjw_calib.NBJW_Calib
+    image_width: 1920
+    image_height: 1080
+    batch_size: 1
+    use_prev_homography: true
+pipeline:
+- pitch
+- calibration
+experiment_name: sn-pitch-calib
+home_dir: ${oc.env:HOME}
+data_dir: ${project_dir}/data
+model_dir: ${project_dir}/pretrained_models
+num_cores: 4
+use_wandb: false
+use_rich: true
+test_tracking: true
+eval_tracking: true
+print_config: false
+project_dir: ${hydra:runtime.cwd}

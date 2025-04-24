@@ -1,0 +1,596 @@
+{
+  "predictions": [
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 382.2067565917969,
+        "y": 783.1063842773438,
+        "w": 71.10150146484375,
+        "h": 177.92047119140625
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 1,
+      "bbox_pitch": {
+        "x_bottom_left": -6.305006478119466,
+        "y_bottom_left": 22.910291983303548,
+        "x_bottom_right": -5.598174699865929,
+        "y_bottom_right": 22.91563803316384,
+        "x_bottom_middle": -5.95159798390344,
+        "y_bottom_middle": 22.91296495230304
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "0"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 1064.4832763671875,
+        "y": 493.9380798339844,
+        "w": 56.9693603515625,
+        "h": 149.62185668945312
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 2,
+      "bbox_pitch": {
+        "x_bottom_left": 0.625159305854191,
+        "y_bottom_left": 11.039176667392569,
+        "x_bottom_right": 1.3634713173755812,
+        "y_bottom_right": 11.044239816198715,
+        "x_bottom_middle": 0.9943072466568712,
+        "y_bottom_middle": 11.041708186488291
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "1"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 699.45654296875,
+        "y": 462.57220458984375,
+        "w": 35.71832275390625,
+        "h": 132.19647216796875
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 11,
+      "bbox_pitch": {
+        "x_bottom_left": -4.3041177827777695,
+        "y_bottom_left": 8.502685304767915,
+        "x_bottom_right": -3.818929307481753,
+        "y_bottom_right": 8.505940714654255,
+        "x_bottom_middle": -4.061527029089764,
+        "y_bottom_middle": 8.504312986335187
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "10"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 970.4835205078125,
+        "y": 239.95806884765625,
+        "w": 42.6719970703125,
+        "h": 100.10238647460938
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 12,
+      "bbox_pitch": {
+        "x_bottom_left": -0.8344378276480375,
+        "y_bottom_left": -9.860160410505069,
+        "x_bottom_right": -0.056471160978672594,
+        "y_bottom_right": -9.855787186800029,
+        "x_bottom_middle": -0.44546344963580636,
+        "y_bottom_middle": -9.857973848993558
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "11"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 1025.320068359375,
+        "y": 329.7382507324219,
+        "w": 29.344482421875,
+        "h": 117.85089111328125
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 13,
+      "bbox_pitch": {
+        "x_bottom_left": 0.14454982961578602,
+        "y_bottom_left": -0.7532538873848655,
+        "x_bottom_right": 0.6121619167698117,
+        "y_bottom_right": -0.7503733931106572,
+        "x_bottom_middle": 0.3783526379302398,
+        "y_bottom_middle": -0.7518136601770052
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "12"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 30.19611167907715,
+        "y": 187.8042449951172,
+        "w": 24.269392013549805,
+        "h": 94.96104431152344
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 14,
+      "bbox_pitch": {
+        "x_bottom_left": -19.451971521571885,
+        "y_bottom_left": -15.968519136140783,
+        "x_bottom_right": -18.973747184578162,
+        "y_bottom_right": -15.96600099067874,
+        "x_bottom_middle": -19.21286274077753,
+        "y_bottom_middle": -15.9672600812481
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "13"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 1105.853759765625,
+        "y": 136.5940704345703,
+        "w": 24.77783203125,
+        "h": 79.31849670410156
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 15,
+      "bbox_pitch": {
+        "x_bottom_left": 1.9600477642367435,
+        "y_bottom_left": -24.270831918012522,
+        "x_bottom_right": 2.502179931803545,
+        "y_bottom_right": -24.268247231171305,
+        "x_bottom_middle": 2.2311094999072654,
+        "y_bottom_middle": -24.269539595322122
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "14"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 1007.1033325195312,
+        "y": 189.76199340820312,
+        "w": 26.09527587890625,
+        "h": 91.88031005859375
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 16,
+      "bbox_pitch": {
+        "x_bottom_left": -0.18103850784537914,
+        "y_bottom_left": -15.994866235127521,
+        "x_bottom_right": 0.33518277192630996,
+        "y_bottom_right": -15.992151917623938,
+        "x_bottom_middle": 0.07706818912355613,
+        "y_bottom_middle": -15.993509097107786
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "15"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 215.44171142578125,
+        "y": 86.86647033691406,
+        "w": 29.419097900390625,
+        "h": 68.57762145996094
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 17,
+      "bbox_pitch": {
+        "x_bottom_left": -19.382616998337145,
+        "y_bottom_left": -33.69941860879605,
+        "x_bottom_right": -18.67135829475834,
+        "y_bottom_right": -33.6964206571512,
+        "x_bottom_middle": -19.02699514017907,
+        "y_bottom_middle": -33.697919664559244
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "16"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 1721.3848876953125,
+        "y": 770.246337890625,
+        "w": 63.8939208984375,
+        "h": 177.82177734375
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 3,
+      "bbox_pitch": {
+        "x_bottom_left": 7.085132510297238,
+        "y_bottom_left": 22.634195826436923,
+        "x_bottom_right": 7.727407653299649,
+        "y_bottom_right": 22.639039269901318,
+        "x_bottom_middle": 7.40626398081701,
+        "y_bottom_middle": 22.63661750216118
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "2"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 1125.235595703125,
+        "y": 372.3611755371094,
+        "w": 47.00830078125,
+        "h": 121.024658203125
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 4,
+      "bbox_pitch": {
+        "x_bottom_left": 1.6483795922603408,
+        "y_bottom_left": 2.4715151858309703,
+        "x_bottom_right": 2.359447302547296,
+        "y_bottom_right": 2.476030677403924,
+        "x_bottom_middle": 2.0039059671176864,
+        "y_bottom_middle": 2.4737728841154074
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "3"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 216.08990478515625,
+        "y": 416.7061462402344,
+        "w": 45.27099609375,
+        "h": 123.95303344726562
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 5,
+      "bbox_pitch": {
+        "x_bottom_left": -11.488305636294907,
+        "y_bottom_left": 5.378505599031215,
+        "x_bottom_right": -10.838739853917838,
+        "y_bottom_right": 5.3827455773142585,
+        "x_bottom_middle": -11.163528992244583,
+        "y_bottom_middle": 5.380625547395142
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "4"
+    },
+    {
+      "image_id": "4001000001",
+      "video_id": "001",
+      "category_id": 5.0,
+      "supercategory": "pitch",
+      "id": "400100000100",
+      "lines": {
+        "Circle central": [
+          {
+            "x": 0.5291666666666667,
+            "y": 0.32222222222222224
+          },
+          {
+            "x": 0.33541666666666664,
+            "y": 0.34814814814814815
+          },
+          {
+            "x": 0.24583333333333332,
+            "y": 0.3962962962962963
+          },
+          {
+            "x": 0.22708333333333333,
+            "y": 0.42592592592592593
+          },
+          {
+            "x": 0.2916666666666667,
+            "y": 0.5148148148148148
+          },
+          {
+            "x": 0.5291666666666667,
+            "y": 0.5666666666666667
+          },
+          {
+            "x": 0.7666666666666667,
+            "y": 0.5185185185185185
+          },
+          {
+            "x": 0.8270833333333333,
+            "y": 0.4222222222222222
+          },
+          {
+            "x": 0.8083333333333333,
+            "y": 0.3925925925925926
+          },
+          {
+            "x": 0.725,
+            "y": 0.34814814814814815
+          }
+        ],
+        "Middle line": [
+          {
+            "x": 0.5291666666666667,
+            "y": 0.14444444444444443
+          },
+          {
+            "x": 0.5291666666666667,
+            "y": 0.32222222222222224
+          },
+          {
+            "x": 0.5291666666666667,
+            "y": 0.4148148148148148
+          },
+          {
+            "x": 0.5291666666666667,
+            "y": 0.5666666666666667
+          }
+        ],
+        "Side line top": [
+          {
+            "x": 0.5291666666666667,
+            "y": 0.14444444444444443
+          }
+        ]
+      }
+    },
+    {
+      "image_id": "4001000001",
+      "video_id": "001",
+      "category_id": 6.0,
+      "supercategory": "camera",
+      "id": "400100000101",
+      "parameters": {
+        "pan_degrees": -0.8888593273668896,
+        "tilt_degrees": 76.19875245472251,
+        "roll_degrees": 0.2689332475788782,
+        "x_focal_length": 3848.197191112656,
+        "y_focal_length": 3848.197191112656,
+        "principal_point": [
+          960.0,
+          540.0
+        ],
+        "position_meters": [
+          0.03516637572861703,
+          59.15411565666478,
+          -13.210880551229584
+        ],
+        "rotation_matrix": [
+          [
+            0.9998860233869633,
+            -0.014393146959134396,
+            0.004558240451947932
+          ],
+          [
+            -0.000992555760252533,
+            0.23859608315343236,
+            0.9711183882189149
+          ],
+          [
+            -0.01506502799425888,
+            -0.9710122277419853,
+            0.23855460277906826
+          ]
+        ],
+        "radial_distortion": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tangential_distortion": [
+          0.0,
+          0.0
+        ],
+        "thin_prism_distortion": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 438.5350341796875,
+        "y": 322.4858703613281,
+        "w": 43.16363525390625,
+        "h": 114.84176635742188
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 6,
+      "bbox_pitch": {
+        "x_bottom_left": -9.312538447863394,
+        "y_bottom_left": -1.5794112880021451,
+        "x_bottom_right": -8.617111323717662,
+        "y_bottom_right": -1.575159074341199,
+        "x_bottom_middle": -8.964832045271507,
+        "y_bottom_middle": -1.577285224948571
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "5"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 166.34381103515625,
+        "y": 609.9713745117188,
+        "w": 49.215179443359375,
+        "h": 161.42144775390625
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 7,
+      "bbox_pitch": {
+        "x_bottom_left": -9.81135303848237,
+        "y_bottom_left": 16.538881332514187,
+        "x_bottom_right": -9.243512458287567,
+        "y_bottom_right": 16.542962777832045,
+        "x_bottom_middle": -9.527437521980392,
+        "y_bottom_middle": 16.540922020862133
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "6"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 674.0310668945312,
+        "y": 191.84619140625,
+        "w": 35.29791259765625,
+        "h": 93.01364135742188
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 8,
+      "bbox_pitch": {
+        "x_bottom_left": -6.735639545808713,
+        "y_bottom_left": -15.664357780712054,
+        "x_bottom_right": -6.041155629217019,
+        "y_bottom_right": -15.66069114194011,
+        "x_bottom_middle": -6.388404726497048,
+        "y_bottom_middle": -15.662524499017488
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "7"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 1401.7313232421875,
+        "y": 315.3197021484375,
+        "w": 35.1400146484375,
+        "h": 105.58639526367188
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 9,
+      "bbox_pitch": {
+        "x_bottom_left": 6.343151222231201,
+        "y_bottom_left": -2.753408248993687,
+        "x_bottom_right": 6.921621711392733,
+        "y_bottom_right": -2.7499146253633038,
+        "x_bottom_middle": 6.6323815175576115,
+        "y_bottom_middle": -2.751661467069102
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "8"
+    },
+    {
+      "image_id": "4001000001",
+      "bbox_image": {
+        "x": 1588.5384521484375,
+        "y": 255.95164489746094,
+        "w": 42.58740234375,
+        "h": 94.75630187988281
+      },
+      "video_id": "001",
+      "category_id": 1.0,
+      "track_id": 10,
+      "bbox_pitch": {
+        "x_bottom_left": 10.293459263391457,
+        "y_bottom_left": -8.780337170335478,
+        "x_bottom_right": 11.059961719892573,
+        "y_bottom_right": -8.775982270604146,
+        "x_bottom_middle": 10.676701804027152,
+        "y_bottom_middle": -8.778159769828678
+      },
+      "supercategory": "object",
+      "attributes": {
+        "role": null,
+        "jersey": null,
+        "team": null
+      },
+      "id": "9"
+    }
+  ]
+}
