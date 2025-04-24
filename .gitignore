@@ -182,3 +182,4 @@ data/
 
 # large files
 outputs/sn-gamestate/2025-03-15/19-21-00/visualization/videos/020.mp4
+pitch_detection/models/
